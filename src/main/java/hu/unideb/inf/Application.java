@@ -16,7 +16,7 @@ public class Application {
 
         Customer customer = new Customer();
         customer.setFirstName("Dennys");
-        customer.setLastName("Fredericci");
+        customer.setLastName("Fredericci");//d
 
         entityManager.getTransaction().begin();
         entityManager.persist(customer);
