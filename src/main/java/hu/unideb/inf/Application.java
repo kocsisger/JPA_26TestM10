@@ -22,6 +22,13 @@ public class Application {
         entityManager.persist(customer);
         entityManager.getTransaction().commit();
 
+        Animal animal = new Animal("Tiger", 10, Animal.GenderType.MALE);
+        Animal animal2 = new Animal("Bear", 20, Animal.GenderType.FEMALE);
+        entityManager.getTransaction().begin();
+        entityManager.persist(animal);
+        entityManager.persist(animal2);
+        entityManager.getTransaction().commit();
+
         System.out.println("Open your browser and navigate to http://localhost:8082/");
         System.out.println("JDBC URL: jdbc:h2:mem:my_database");
         System.out.println("User Name: sa");
