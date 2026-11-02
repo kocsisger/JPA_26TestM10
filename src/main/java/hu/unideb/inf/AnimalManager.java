@@ -12,12 +12,14 @@ public class AnimalManager {
         Animal animal = new Animal("Tiger", 10, Animal.GenderType.MALE);
         Animal animal2 = new Animal("Bear", 20, Animal.GenderType.FEMALE);
 
-        aDAO.saveAnimal(animal);
-        aDAO.saveAnimal(animal2);
+       // aDAO.saveAnimal(animal);
+       // aDAO.saveAnimal(animal2);
 
         Zoo zoo = new Zoo();
         zoo.setName("Debrecen Zoo");
         zoo.getAnimals().add(animal);
         zoo.getAnimals().add(animal2);
+
+        aDAO.saveZoo(zoo);
     }
 }
