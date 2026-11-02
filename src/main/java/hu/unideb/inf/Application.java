@@ -11,7 +11,7 @@ public class Application {
     public static void main(String[] args) throws SQLException {
         startDatabase();
 
-        AnimalManager.setaDAO(new TerminalAnimalDAO());
+        AnimalManager.setaDAO(new JPAAnimalDAO());
         AnimalManager.manageAnimals();
 
         System.out.println("Open your browser and navigate to http://localhost:8082/");
